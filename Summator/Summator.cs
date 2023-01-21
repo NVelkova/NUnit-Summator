@@ -9,31 +9,39 @@ namespace Summator
     public static class Summator
     {
        
-        public static int Sum(int[] arr)
+        public static long Sum(double[] arr)
         { 
             
-        int sum = arr[0];
-        for (int i = 1; i < arr.Length; i++)
+        double sum = 0;
+        for (int i = 0; i < arr.Length; i++)
             {
                 sum += arr[i];
             }
         
-        return sum;
+        return (long)sum;
         }
-        public static void Test_SumTwoNumbers()
 
+        public static long Average(double[] arr)
         {
-        if (Sum(new int[] { 1, 5 }) != 3)
+
+            double sum1 = 0;
+            for (int i = 0; i < arr.Length; i++)
             {
-                throw new Exception("1+2 != 3");
+                sum1 += arr[i]/arr.Length;
             }
-            else
-            {
-                Console.WriteLine("Test Passed!");
-            }
-        
+
+            return (long)sum1;
         }
 
-        
+        public static long Multiplication(double[] arr)
+        {
+            double result = 1;
+            
+            for (int i = 0; i < arr.Length; i++)
+            {
+                result *= arr[i] ;
+            }
+            return (long) result;
+        }
     }
 }
