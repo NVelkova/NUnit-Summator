@@ -100,6 +100,17 @@ namespace Summator.UnitTests
             Assert.That(actual, Is.EqualTo(expected));
 
         }
+
+        [Test]
+        public void Test_Summator_SumNegativeAndCheckRange()
+        {
+            var numbers = new double[] { -3, -5 };
+            var actual = Summator.Sum(numbers);
+            var expected = -8;
+            Assert.That(expected, Is.InRange(-9, 0));
+
+        }
+
         //Average
         [Test]
         public void Test_Summator_AverageNum()
@@ -110,6 +121,7 @@ namespace Summator.UnitTests
             Assert.AreEqual(expected, actual);
 
         }
+
         //Multiplication
         [Test]
         public void Test_Summator_MultiplicationNum()
