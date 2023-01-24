@@ -46,7 +46,7 @@ namespace Summator
 
         public static long Division(double[] arr)
         {
-            double result = 1;
+            double result = 10;
 
             for (int i = 0; i < arr.Length; i++)
             {

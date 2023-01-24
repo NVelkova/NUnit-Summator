@@ -4,7 +4,7 @@ namespace Summator.UnitTests
 {
     public class SummatorTests
     {
-       
+
         [Test]
         public void Test_Summator_SumTwoPositiveNumbers()
         {
@@ -24,7 +24,7 @@ namespace Summator.UnitTests
             var expected = -4;
             Assert.AreEqual(actual, expected);
 
-          }
+        }
 
         [Test]
         public void Test_Summator_SumWithZero()
@@ -153,14 +153,15 @@ namespace Summator.UnitTests
 
         }
         //Division
-        [Test]
-        public void Test_Summator_DivisionWithZero()
-        {
-            var numbers = new double[] { 3, 0 };
-            var actual = Summator.Multiplication(numbers);
-            var expected = 0;
-            Assert.That(actual, Is.EqualTo(expected));
 
+        [Test]
+        public void Test_Summator_DivisionWithTwoPositive()
+        {
+            var numbers = new double[] { 2 };
+            var actual = Summator.Division(numbers);
+            var expected = 5;
+            Assert.That(actual, Is.EqualTo(expected));
         }
     }
+
 }
