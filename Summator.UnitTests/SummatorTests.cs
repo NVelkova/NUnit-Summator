@@ -154,6 +154,7 @@ namespace Summator.UnitTests
         }
         //Division
 
+        [Category("Medium")]
         [Test]
         public void Test_Summator_DivisionWithTwoPositive()
         {
@@ -163,5 +164,5 @@ namespace Summator.UnitTests
             Assert.That(actual, Is.EqualTo(expected));
         }
     }
-
+    
 }
