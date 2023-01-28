@@ -196,7 +196,6 @@ namespace Summator.UnitTests
         }
         [TestCase(new double[] { 2 }, 5)]
         [TestCase(new double[] { 10 }, 1)]
-        
         public void Test_Summator_Division(double[] values, long expected)
         {
             var actual = Summator.Division(values);
