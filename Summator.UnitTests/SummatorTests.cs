@@ -177,10 +177,10 @@ namespace Summator.UnitTests
             var actual = Summator.Sum(values);
             Assert.That(actual, Is.EqualTo((double)expected));
         }
-        [TestCase(new double[] {1, 3}, 2)]
+        [TestCase(new double[] {1, 2}, 1.5)]
         [TestCase(new double[] {2, 8}, 5)]
         [TestCase(new double[] {-1, -3}, -2)]
-        public void Test_Summator_Average(double[] values, long expected)
+        public void Test_Summator_Average(double[] values, double expected)
         {
             var actual = Summator.Average(values);
             Assert.That(actual, Is.EqualTo((double)expected));
