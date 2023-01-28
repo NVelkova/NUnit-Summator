@@ -21,7 +21,7 @@ namespace Summator
         return (long)sum;
         }
 
-        public static long Average(double[] arr)
+        public static double Average(double[] arr)
         {
 
             double sum1 = 0;
@@ -30,7 +30,7 @@ namespace Summator
                 sum1 += arr[i]/arr.Length;
             }
 
-            return (long)sum1;
+            return (double)sum1;
         }
 
         public static long Multiplication(double[] arr)
