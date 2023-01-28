@@ -154,6 +154,7 @@ namespace Summator.UnitTests
         }
         //Division
 
+        [Category("Medium")]
         [Test]
         public void Test_Summator_DivisionWithTwoPositive()
         {
@@ -162,6 +163,46 @@ namespace Summator.UnitTests
             var expected = 5;
             Assert.That(actual, Is.EqualTo(expected));
         }
-    }
 
+        //Data-Driven Testing
+        [TestCase(new double[] { 1, 3 }, 4)]
+        [TestCase(new double[] { -1, -3 }, -4)]
+        [TestCase(new double[] { 3 }, 3)]
+        [TestCase(new double[] { 1, -2 }, -1)]
+        [TestCase(new double[] { 3, 0 }, 3)]
+        [TestCase(new double[] { 3.5, 0.5 }, 4)]
+        [TestCase(new double[] { }, 0)]
+        public void Test_Summator_SumDDT(double[] values, long expected)
+        {
+            var actual = Summator.Sum(values);
+            Assert.That(actual, Is.EqualTo((double)expected));
+        }
+        [TestCase(new double[] {1, 3}, 2)]
+        [TestCase(new double[] {2, 8}, 5)]
+        [TestCase(new double[] {-1, -3}, -2)]
+        public void Test_Summator_Average(double[] values, long expected)
+        {
+            var actual = Summator.Average(values);
+            Assert.That(actual, Is.EqualTo((double)expected));
+        }
+        [TestCase(new double[] {3, 5}, 15)]
+        [TestCase(new double[] { 3, -5 }, -15)]
+        [TestCase(new double[] { }, 1)]
+        [TestCase(new double[] {3, 0}, 0)]
+        public void Test_Summator_Multiplication(double[] values, long expected)
+        {
+            var actual = Summator.Multiplication(values);
+            Assert.That(actual, Is.EqualTo((double)expected));
+        }
+        [TestCase(new double[] { 2 }, 5)]
+        [TestCase(new double[] { 10 }, 1)]
+        
+        public void Test_Summator_Division(double[] values, long expected)
+        {
+            var actual = Summator.Division(values);
+            Assert.That(actual, Is.EqualTo((double)expected));
+        }
+
+    }
+        
 }
